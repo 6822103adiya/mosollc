@@ -1,0 +1,131 @@
+.about {
+  margin-top: 80px;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-dark-gray) 50%, var(--secondary-dark) 100%);
+  color: var(--text-light);
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-content {
+  padding: 5rem 0;
+  background: var(--bg-dark-gray);
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--secondary-dark);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: var(--accent-cyan);
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+}
+
+.about-text h2:first-child {
+  margin-top: 0;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.service-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--primary-dark-gray);
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-cyan);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+  border-left-color: var(--accent-purple);
+}
+
+.check-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.service-item h3 {
+  font-size: 1.2rem;
+  color: var(--accent-cyan);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.service-item p {
+  color: var(--text-gray);
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-text {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+

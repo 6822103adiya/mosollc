@@ -1,0 +1,213 @@
+.order {
+  margin-top: 80px;
+}
+
+.order-hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-dark-gray) 50%, var(--secondary-dark) 100%);
+  color: var(--text-light);
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.order-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.order-content {
+  padding: 5rem 0;
+  background: var(--bg-dark-gray);
+}
+
+.order-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.order-info {
+  background: var(--secondary-dark);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.order-info h2 {
+  font-size: 2rem;
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.order-info > p {
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.order-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--color-emerald-400), var(--accent-cyan));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(52, 211, 153, 0.9);
+    transform: scale(1.05);
+  }
+}
+
+.step-content h4 {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: var(--text-gray);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.order-form {
+  background: var(--secondary-dark);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: var(--primary-dark-gray);
+  color: var(--text-light);
+}
+
+.form-group select {
+  cursor: pointer;
+  background: var(--primary-dark-gray);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-emerald-400), var(--accent-cyan), var(--accent-purple));
+  background-size: 200% auto;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 20px rgba(52, 211, 153, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+  border: 2px solid rgba(52, 211, 153, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(52, 211, 153, 0.7), 0 0 60px rgba(0, 255, 255, 0.5);
+  background-position: right center;
+  border-color: var(--color-emerald-400);
+}
+
+@media (max-width: 968px) {
+  .order-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-info,
+  .order-form {
+    padding: 2rem;
+  }
+}
+
+
+
